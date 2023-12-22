@@ -1,6 +1,7 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import { DarkLightModeSwitch } from './components/DarkLightModeSwitch'
+import { DarkLightModeSwitch } from './components/DarkLightModeSwitch';
+
 
 export default function Home() {
   return (
