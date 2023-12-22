@@ -7,18 +7,18 @@ import { Button } from "@nextui-org/react";
 import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
 
-export function ThemeSwitcher() {
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+export function DarkLightModeSwitch() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const switchTheme = () => {
-    if (theme ==='dark') setTheme('light');
-    if (theme ==='light') setTheme('dark');
-  }
+    if (theme =='dark') setTheme('light');
+    if (theme =='light') setTheme('dark');
+  };
 
   useEffect(() => {
     setMounted(true)
-  }, [])
+  }, []);
 
   if(!mounted)
     return (
@@ -52,25 +52,25 @@ export function ThemeSwitcher() {
           >
           </Button>
       </div>
-    )
+    );
 
-  if (theme ==='dark')
+  if (theme === 'dark')
   return (
     <div>
         <Button isIconOnly color="warning" aria-label="Light Mode" onPress={() => switchTheme()}>
           <SunIcon />
         </Button>
     </div>
-  )
+  );
 
-  if (theme ==='light')
+  if (theme === 'light')
   return (
     <div>
         <Button isIconOnly color="secondary" aria-label="Light Mode" onPress={() => switchTheme()}>
           <MoonIcon />
         </Button>
     </div>
-  )
+  );
 
 
 };
