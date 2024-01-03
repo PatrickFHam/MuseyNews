@@ -7,11 +7,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Musey News',
   description: 'News for the Amusement Park Enthusiasts',
-}
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className='dark'>
+    <html lang="en">
       <body className={inter.className}>
         <Providers>
           {children}
@@ -19,4 +19,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   )
-}
+};
